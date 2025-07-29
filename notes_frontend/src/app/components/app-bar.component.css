@@ -1,0 +1,54 @@
+.appbar {
+  width: 100vw;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 58px;
+  min-height: 58px;
+  font-family: inherit;
+}
+.appbar__title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+.appbar__spacer {
+  flex: 1 1 auto;
+}
+.appbar__user {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.appbar__username {
+  font-size: 1rem;
+  color: #222;
+}
+.appbar__logout {
+  background: none;
+  border: none;
+  color: #388e3c;
+  cursor: pointer;
+  padding: 0.35em 0.75em;
+  border-radius: 6px;
+  transition: background .18s;
+  font-weight: 500;
+}
+.appbar__logout:hover {
+  background: #f3fbe4;
+}
+.appbar__auth-link {
+  color: #1976d2;
+  text-decoration: none;
+  margin: 0 0.2em;
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .appbar {
+    font-size: 1rem;
+    padding: 0 .5rem;
+  }
+}

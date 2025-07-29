@@ -1,0 +1,88 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(28,44,65,0.17);
+  z-index: 11;
+}
+.note-modal[open] {
+  position: fixed;
+  left: 50%;
+  top: 60px;
+  transform: translateX(-50%);
+  min-width: 370px;
+  background: #fff;
+  padding: 2.5em 2.1em 1.2em 2.1em;
+  border-radius: 14px;
+  box-shadow: 0 5px 36px rgba(0,0,0,0.17), 0 0.5px 1px rgba(20,30,45,0.07);
+  z-index: 12;
+  border: none;
+}
+@media (max-width: 560px) {
+  .note-modal[open] {
+    min-width: unset;
+    width: 97vw;
+    top: 10vw;
+    padding: 0.8em 0.7em 1.1em 0.7em;
+  }
+}
+.note-modal h2 {
+  font-size: 1.19em;
+  margin-bottom: 1.1em;
+  color: #1976d2;
+}
+.modal-lbl {
+  font-size: 1.02em;
+  display: block;
+  margin-bottom: 0.8em;
+  color: #444;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.modal-input {
+  width: 100%;
+  border: 1px solid #d9dbe7;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.6em 0.95em;
+  margin-top: 0.2em;
+  margin-bottom: 0.1em;
+  font-size: 1.11em;
+  font-family: inherit;
+  transition: border .12s;
+}
+.modal-input:focus {
+  outline: none;
+  border: 1.3px solid #1976d2;
+}
+.modal-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+  margin-top: 1.7em;
+}
+.btn-save {
+  background: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 0.4em 1.4em;
+  border-radius: 8px;
+  font-size: 1.07em;
+  font-weight: 540;
+  cursor: pointer;
+  transition: background .18s;
+}
+.btn-save:hover {
+  background: #267127;
+}
+.btn-cancel {
+  background: #f1f1f1;
+  color: #1976d2;
+  border: none;
+  padding: 0.4em 1.1em;
+  border-radius: 8px;
+  font-size: 1.07em;
+  cursor: pointer;
+}
+.btn-cancel:hover {
+  background: #eaf5fd;
+}

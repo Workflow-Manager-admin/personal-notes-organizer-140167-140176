@@ -1,0 +1,22 @@
+<div class="modal-backdrop"></div>
+<dialog open class="note-modal">
+  <form (ngSubmit)="onSubmit()">
+    <h2>{{ isNew ? 'Create Note' : 'Edit Note' }}</h2>
+    <label class="modal-lbl">Title
+      <input class="modal-input" [(ngModel)]="form.title" name="title" required maxlength="120" />
+    </label>
+    <label class="modal-lbl">Content
+      <textarea class="modal-input" [(ngModel)]="form.content" name="content" rows="7" required maxlength="3000"></textarea>
+    </label>
+    <label class="modal-lbl">Categories
+      <input class="modal-input" [(ngModel)]="form.categories" name="categories" placeholder="Comma separated (e.g. Work, Life)" />
+    </label>
+    <label class="modal-lbl">Tags
+      <input class="modal-input" [(ngModel)]="form.tags" name="tags" placeholder="Comma separated (e.g. urgent, todo)" />
+    </label>
+    <div class="modal-actions">
+      <button type="button" class="btn-cancel" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn-save">{{ isNew ? 'Create' : 'Save' }}</button>
+    </div>
+  </form>
+</dialog>

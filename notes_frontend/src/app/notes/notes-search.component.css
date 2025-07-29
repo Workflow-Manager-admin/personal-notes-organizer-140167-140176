@@ -1,0 +1,21 @@
+.notes-search-box {
+  width: 270px;
+  max-width: 100%;
+  padding: .47em 1em;
+  font-size: 1.09em;
+  border: 1px solid #d9dbe7;
+  border-radius: 6px;
+  transition: border .13s;
+  background: #fff;
+  margin-right: 1em;
+}
+.notes-search-box:focus {
+  outline: none;
+  border: 1.1px solid #1976d2;
+}
+@media (max-width: 900px) {
+  .notes-search-box {
+    width: 100vw;
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,15 @@
+<section class="notes-page-header">
+  <app-notes-search (search)="onSearch($event)"></app-notes-search>
+  <button class="btn-new" (click)="onNewNote()">New Note</button>
+</section>
+<section class="notes-list">
+  <app-note-card
+    *ngFor="let note of filteredNotes"
+    [note]="note"
+    (edit)="onEditNote(note)"
+    (delete)="onNoteDelete(note)">
+  </app-note-card>
+  <p *ngIf="filteredNotes.length === 0" class="empty-msg">
+    No notes found.
+  </p>
+</section>

@@ -1,0 +1,15 @@
+<div class="note-card">
+  <div class="note-card__info">
+    <span class="note-card__date" title="Updated Time">Updated: {{ formatDate(note.updatedAt) }}</span>
+    <div class="note-card__actions">
+      <button class="note-btn-edit" (click)="onEdit()" title="Edit"><span>✏️</span></button>
+      <button class="note-btn-delete" (click)="onDelete()" title="Delete"><span>🗑️</span></button>
+    </div>
+  </div>
+  <h2 class="note-card__title">{{ note.title }}</h2>
+  <p class="note-card__content">{{ note.content }}</p>
+  <div class="note-card__tags">
+    <span *ngFor="let cat of note.categories" class="note-card__cat">{{ cat }}</span>
+    <span *ngFor="let tag of note.tags" class="note-card__tag">#{{ tag }}</span>
+  </div>
+</div>

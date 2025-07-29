@@ -1,0 +1,30 @@
+.notes-page-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  margin-bottom: 2rem;
+}
+.btn-new {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 0.44em 1.4em;
+  border-radius: 8px;
+  font-size: 1.07rem;
+  font-weight: 540;
+  cursor: pointer;
+  transition: background .18s;
+}
+.btn-new:hover {
+  background: #145a9c;
+}
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 1.3em;
+}
+.empty-msg {
+  margin: 2em 0 0 1em;
+  color: #888;
+  font-size: 1.09rem;
+}

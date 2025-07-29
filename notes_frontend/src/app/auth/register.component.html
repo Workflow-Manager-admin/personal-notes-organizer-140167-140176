@@ -1,0 +1,18 @@
+<div class="auth-page">
+  <form class="auth-form" (ngSubmit)="onSubmit()">
+    <h2>Sign Up</h2>
+    <label>Email
+      <input type="email" required [(ngModel)]="email" name="email">
+    </label>
+    <label>Password
+      <input type="password" required [(ngModel)]="password" name="password">
+    </label>
+    <button type="submit" class="auth-btn">Sign Up</button>
+    <div *ngIf="errorMsg" class="error-msg">
+      {{ errorMsg }}
+    </div>
+    <div class="auth-more">
+      Already have an account? <a routerLink="/login">Login</a>
+    </div>
+  </form>
+</div>
